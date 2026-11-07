@@ -1,0 +1,18 @@
+# Innehåller access token – får aldrig pushas
+CLAUDE.md
+# Referensfoton
+*.jpg
+
+# SolidCraft backup- och låsfiler
+*.bak
+.~*.lock
+
+# Gamla filer som inte längre gäller (massivt trappblock / OpenSCAD)
+rgbstaken.scad
+build.ps1
+solidcraft/rgbstaken.sc
+solidcraft/rgbstaken.step
+solidcraft/rgbstaken.png
+solidcraft/rgbstaken_bas_utkast.step
+solidcraft/bas_utkast.png
+solidcraft/bas_steg.json
