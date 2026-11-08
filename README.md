@@ -4,7 +4,8 @@
 
 ![RGB-staken i fönstret en decemberkväll](bilder/fonster_december.png)
 
-*Illustration (inte foto). Staken är ritad efter måtten i modellen v2. Bilden genereras med `bilder/scen.py`.*
+*Rendering (inte foto) i Blender Cycles. Staken är byggd av de riktiga STL-filerna i `stl/`, allt runt omkring är scenografi.
+Rendera om med `blender -b -P bilder/render_scen.py -- <projektmapp> bilder/fonster_december.png 512`.*
 
 ![Basen framifrån](solidcraft/bas_bage_fram.png)
 
