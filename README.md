@@ -2,6 +2,10 @@
 
 3D-printad adventsljusstake med 7 ljus och RGB-belysning (WS2812B/SK6812 + XIAO ESP32C3, WLED).
 
+![RGB-staken i fönstret en decemberkväll](bilder/fonster_december.png)
+
+*Illustration (inte foto). Staken är ritad efter måtten i modellen v2. Bilden genereras med `bilder/scen.py`.*
+
 ![Basen framifrån](solidcraft/bas_bage_fram.png)
 
 ## Status (2026-11-08)
