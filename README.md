@@ -50,4 +50,9 @@ CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`.
 
 - 7 × WS2812B eller SK6812 RGBW på rund PCB (≤ Ø12 mm), en i toppen av varje pelare.
 - XIAO ESP32C3 matas via USB-C, LED:erna från 5V-pinnen (≈ 0,4 A max).
-- ~330 Ω på data, ~470 µF över 5V/GND. Mjukvara: WLED.
+- ~330 Ω på data, ~470 µF över 5V/GND. Mjukvara: WLED eller ESPHome.
+
+Kopplingsschema, dragning i basen och färdig konfiguration för WLED och ESPHome finns i
+[`elektronik/`](elektronik/README.md).
+
+![Kopplingsschema](elektronik/kopplingsschema.svg)

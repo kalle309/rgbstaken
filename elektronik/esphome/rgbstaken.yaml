@@ -1,0 +1,145 @@
+# RGB-staken – ESPHome-konfiguration för Seeed XIAO ESP32C3 + 7 adresserbara LED
+# Kopplingsschema: ../kopplingsschema.svg
+#
+# Flasha första gången via USB: `esphome run rgbstaken.yaml` (eller ESPHome Device Builder / web.esphome.io).
+# Kopiera secrets.yaml.example till secrets.yaml och fyll i.
+# Syns inte kortet? Håll BOOT-knappen intryckt när USB-kabeln ansluts.
+
+substitutions:
+  name: rgbstaken
+  friendly_name: RGB-staken
+  led_pin: GPIO10          # XIAO-pinne D10
+  num_leds: "7"
+
+esphome:
+  name: ${name}
+  friendly_name: ${friendly_name}
+
+esp32:
+  board: seeed_xiao_esp32c3
+  framework:
+    type: esp-idf
+
+logger:
+
+api:
+  encryption:
+    key: !secret api_key
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+  ap:
+    ssid: "RGB-staken Fallback"
+    password: !secret ap_password
+
+captive_portal:
+
+# Enkel webbsida på http://rgbstaken.local – användbar utan Home Assistant
+web_server:
+  port: 80
+
+light:
+  # Hela staken
+  - platform: esp32_rmt_led_strip
+    id: staken
+    name: "Staken"
+    pin: ${led_pin}
+    num_leds: ${num_leds}
+    # WS2812B (RGB):
+    chipset: WS2812
+    rgb_order: GRB
+    # SK6812 RGBW – byt de två raderna ovan mot:
+    # chipset: SK6812
+    # rgb_order: GRB
+    # is_rgbw: true
+    default_transition_length: 1s
+    restore_mode: RESTORE_DEFAULT_OFF
+    effects:
+      - addressable_lambda:
+          name: "Levande ljus"
+          update_interval: 40ms
+          lambda: |-
+            // Varje ljus fladdrar för sig, mjukt filtrerat så det liknar en stearinlåga.
+            static float niva[16] = {0};
+            for (int i = 0; i < it.size() && i < 16; i++) {
+              float mal = 0.65f + 0.35f * random_float();
+              if (random_float() < 0.03f) mal *= 0.6f;   // enstaka djupare dipp
+              niva[i] += (mal - niva[i]) * 0.25f;
+              uint8_t v = (uint8_t) (niva[i] * 255.0f);
+              it[i] = Color(v, v * 40 / 100, v * 6 / 100);
+            }
+      - flicker:
+          name: "Flimmer (hela staken)"
+          alpha: 95%
+          intensity: 8%
+      - addressable_twinkle:
+          name: "Glitter"
+          twinkle_probability: 5%
+          progress_interval: 10ms
+      - addressable_rainbow:
+          name: "Regnbåge"
+          speed: 6
+          width: 7
+      - addressable_color_wipe:
+          name: "Julfärger"
+          colors:
+            - red: 85%
+              green: 0%
+              blue: 0%
+              num_leds: 1
+            - red: 0%
+              green: 70%
+              blue: 8%
+              num_leds: 1
+          add_led_interval: 400ms
+      - pulse:
+          name: "Andas"
+          transition_length: 2s
+          update_interval: 2s
+
+  # Varje ljus som en egen lampa i Home Assistant (idx 0 = yttersta högra, idx 3 = mitten)
+  - platform: partition
+    name: "Ljus 1 (höger ytter)"
+    segments: [{id: staken, from: 0, to: 0}]
+  - platform: partition
+    name: "Ljus 2"
+    segments: [{id: staken, from: 1, to: 1}]
+  - platform: partition
+    name: "Ljus 3"
+    segments: [{id: staken, from: 2, to: 2}]
+  - platform: partition
+    name: "Ljus 4 (mitten)"
+    segments: [{id: staken, from: 3, to: 3}]
+  - platform: partition
+    name: "Ljus 5"
+    segments: [{id: staken, from: 4, to: 4}]
+  - platform: partition
+    name: "Ljus 6"
+    segments: [{id: staken, from: 5, to: 5}]
+  - platform: partition
+    name: "Ljus 7 (vänster ytter)"
+    segments: [{id: staken, from: 6, to: 6}]
+
+# Valfritt: tänd/släck på tid utan Home Assistant. Ta bort #-tecknen för att aktivera.
+# time:
+#   - platform: sntp
+#     timezone: Europe/Stockholm
+#     on_time:
+#       - seconds: 0
+#         minutes: 30
+#         hours: 15
+#         then:
+#           - light.turn_on:
+#               id: staken
+#               brightness: 70%
+#               effect: "Levande ljus"
+#       - seconds: 0
+#         minutes: 0
+#         hours: 23
+#         then:
+#           - light.turn_off: staken

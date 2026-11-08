@@ -16,3 +16,7 @@ solidcraft/rgbstaken.png
 solidcraft/rgbstaken_bas_utkast.step
 solidcraft/bas_utkast.png
 solidcraft/bas_steg.json
+
+# ESPHome – lösenord och byggkatalog
+elektronik/esphome/secrets.yaml
+elektronik/esphome/.esphome/

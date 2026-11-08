@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="830" viewBox="0 0 1320 830" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .v5  { stroke:#d62828; stroke-width:3; fill:none; }
+      .gnd { stroke:#222222; stroke-width:3; fill:none; }
+      .dat { stroke:#1f8a70; stroke-width:3; fill:none; }
+      .lbl { font-size:14px; fill:#333; }
+      .sm  { font-size:12px; fill:#555; }
+      .pin { font-size:15px; fill:#111; font-weight:600; }
+      .h   { font-size:15px; fill:#111; font-weight:600; }
+    </style>
+  </defs>
+  <rect width="1320" height="830" fill="#ffffff"/>
+
+  <text x="40" y="40" font-size="26" font-weight="700" fill="#111">RGB-staken – kopplingsschema</text>
+  <text x="40" y="64" class="lbl">7 × WS2812B / SK6812 (rund PCB ≤ Ø12) i kedja, Seeed XIAO ESP32C3 i högra foten. Vy framifrån.</text>
+
+  <g transform="translate(0,34)">
+  <!-- Basen (schematisk silhuett) -->
+  <polygon points="139,328 240,328 240,280 360,280 360,232 480,232 480,184 600,184 600,232 720,232 720,280 840,280 840,328 941,328 960,356 991,376 900,376 540,244 180,376 89,376 120,356 139,328"
+           fill="#efe9df" stroke="#cbbfae" stroke-width="2"/>
+  <rect x="36" y="376" width="168" height="24" rx="3" fill="#e6dfd2" stroke="#cbbfae" stroke-width="2"/>
+  <rect x="876" y="376" width="168" height="24" rx="3" fill="#e6dfd2" stroke="#cbbfae" stroke-width="2"/>
+
+  <!-- Pelare, lågor och LED -->
+  <g id="pelare" fill="#f7f4ee" stroke="#cbbfae" stroke-width="2">
+    <rect x="888" y="244" width="24" height="84"/>
+    <rect x="768" y="196" width="24" height="84"/>
+    <rect x="648" y="148" width="24" height="84"/>
+    <rect x="528" y="100" width="24" height="84"/>
+    <rect x="408" y="148" width="24" height="84"/>
+    <rect x="288" y="196" width="24" height="84"/>
+    <rect x="168" y="244" width="24" height="84"/>
+  </g>
+  <g id="lagor" fill="#fff4d6" stroke="#e0b860" stroke-width="1.5">
+    <ellipse cx="900" cy="212" rx="9" ry="15"/>
+    <ellipse cx="780" cy="164" rx="9" ry="15"/>
+    <ellipse cx="660" cy="116" rx="9" ry="15"/>
+    <ellipse cx="540" cy="68"  rx="9" ry="15"/>
+    <ellipse cx="420" cy="116" rx="9" ry="15"/>
+    <ellipse cx="300" cy="164" rx="9" ry="15"/>
+    <ellipse cx="180" cy="212" rx="9" ry="15"/>
+  </g>
+
+  <!-- 5V-ledare (x-6) -->
+  <g class="v5">
+    <path d="M894 267V490"/><path d="M774 219V490"/><path d="M654 171V490"/><path d="M534 123V490"/>
+    <path d="M414 171V490"/><path d="M294 219V490"/><path d="M174 267V490"/>
+    <path d="M174 490H1040"/>
+    <path d="M1010 490V506"/>
+  </g>
+  <!-- GND-ledare (x+6) -->
+  <g class="gnd">
+    <path d="M906 267V530"/><path d="M786 219V530"/><path d="M666 171V530"/><path d="M546 123V530"/>
+    <path d="M426 171V530"/><path d="M306 219V530"/><path d="M186 267V530"/>
+    <path d="M186 530H1040"/>
+    <path d="M1010 515V530"/>
+  </g>
+  <!-- Data: D10 -> 330 Ω -> DIN ljus 1, DOUT -> DIN nästa ... -->
+  <g class="dat">
+    <path d="M1040 450H1000"/>
+    <path d="M960 450H916V260"/>
+    <path d="M884 260V450H796V212"/>
+    <path d="M764 212V450H676V164"/>
+    <path d="M644 164V450H556V116"/>
+    <path d="M524 116V450H436V164"/>
+    <path d="M404 164V450H316V212"/>
+    <path d="M284 212V450H196V260"/>
+  </g>
+  <!-- 330 Ω -->
+  <rect x="960" y="443" width="40" height="14" fill="#ffffff" stroke="#1f8a70" stroke-width="2.5"/>
+  <text x="980" y="436" text-anchor="middle" class="sm">330 Ω</text>
+  <!-- Kondensator 100–470 µF -->
+  <line x1="996" y1="506" x2="1024" y2="506" stroke="#d62828" stroke-width="4"/>
+  <path d="M996 517 Q1010 510 1024 517" stroke="#222" stroke-width="4" fill="none"/>
+  <text x="986" y="504" class="sm">+</text>
+  <text x="1000" y="556" text-anchor="end" class="sm">100–470 µF</text>
+
+  <!-- Kopplingspunkter -->
+  <g fill="#d62828">
+    <circle cx="894" cy="490" r="4"/><circle cx="774" cy="490" r="4"/><circle cx="654" cy="490" r="4"/>
+    <circle cx="534" cy="490" r="4"/><circle cx="414" cy="490" r="4"/><circle cx="294" cy="490" r="4"/>
+    <circle cx="174" cy="490" r="4"/><circle cx="1010" cy="490" r="4"/>
+  </g>
+  <g fill="#222">
+    <circle cx="906" cy="530" r="4"/><circle cx="786" cy="530" r="4"/><circle cx="666" cy="530" r="4"/>
+    <circle cx="546" cy="530" r="4"/><circle cx="426" cy="530" r="4"/><circle cx="306" cy="530" r="4"/>
+    <circle cx="186" cy="530" r="4"/><circle cx="1010" cy="530" r="4"/>
+  </g>
+
+  <!-- LED-kretsar -->
+  <g fill="#fff7e0" stroke="#b58900" stroke-width="2.5">
+    <circle cx="900" cy="248" r="20"/><circle cx="780" cy="200" r="20"/><circle cx="660" cy="152" r="20"/>
+    <circle cx="540" cy="104" r="20"/><circle cx="420" cy="152" r="20"/><circle cx="300" cy="200" r="20"/>
+    <circle cx="180" cy="248" r="20"/>
+  </g>
+  <g text-anchor="middle" font-size="16" font-weight="700" fill="#7a5c00">
+    <text x="900" y="254">1</text><text x="780" y="206">2</text><text x="660" y="158">3</text>
+    <text x="540" y="110">4</text><text x="420" y="158">5</text><text x="300" y="206">6</text>
+    <text x="180" y="254">7</text>
+  </g>
+  <g class="sm">
+    <text x="926" y="244">idx 0</text><text x="806" y="196">idx 1</text><text x="686" y="148">idx 2</text>
+    <text x="566" y="100">idx 3</text><text x="446" y="148">idx 4</text><text x="326" y="196">idx 5</text>
+    <text x="206" y="244">idx 6</text>
+  </g>
+  <!-- Paddetiketter på ljus 1 -->
+  <g class="sm">
+    <text x="922" y="290">DIN</text>
+    <text x="858" y="290" text-anchor="end">DOUT</text>
+    <text x="142" y="290" text-anchor="end">DOUT oansluten</text>
+  </g>
+
+  <text x="560" y="552" text-anchor="middle" class="sm" font-style="italic">ledningarna går i kabelkanalen längs bågen (4 ledare ner i varje pelare)</text>
+
+  <!-- XIAO ESP32C3 -->
+  <rect x="1040" y="400" width="170" height="160" rx="8" fill="#1d3557" stroke="#0b1d33" stroke-width="2"/>
+  <text x="1125" y="424" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">XIAO ESP32C3</text>
+  <text x="1125" y="582" text-anchor="middle" class="sm">i facket i högra foten</text>
+  <g font-size="14" font-weight="600" fill="#ffffff">
+    <text x="1052" y="455">D10 (GPIO10)</text>
+    <text x="1052" y="495">5V</text>
+    <text x="1052" y="535">GND</text>
+  </g>
+  <g fill="#f1c40f"><rect x="1036" y="445" width="8" height="10"/><rect x="1036" y="485" width="8" height="10"/><rect x="1036" y="525" width="8" height="10"/></g>
+  <rect x="1210" y="462" width="16" height="44" rx="5" fill="#9aa5b1" stroke="#555" stroke-width="1.5"/>
+  <text x="1234" y="480" class="lbl">USB-C</text>
+  <text x="1234" y="498" class="sm">5 V in genom</text>
+  <text x="1234" y="513" class="sm">fotens ände</text>
+
+  <!-- Teckenförklaring och noter -->
+  <line x1="40" y1="610" x2="1280" y2="610" stroke="#ddd" stroke-width="1"/>
+  <line x1="40" y1="638" x2="80" y2="638" class="v5"/><text x="90" y="643" class="lbl">+5 V (USB VBUS via XIAO 5V-pinne)</text>
+  <line x1="40" y1="664" x2="80" y2="664" class="gnd"/><text x="90" y="669" class="lbl">GND</text>
+  <line x1="40" y1="690" x2="80" y2="690" class="dat"/><text x="90" y="695" class="lbl">Data (3,3 V): D10 → 330 Ω → DIN ljus 1, DOUT → DIN på nästa ljus</text>
+
+  <g class="lbl">
+    <text x="660" y="643">• Ljus 1 (idx 0) = yttersta högra, närmast XIAO. Mittljuset = idx 3.</text>
+    <text x="660" y="669">• 330 Ω och kondensatorn sitter nära XIAO (schakt/tunnel). + mot 5V.</text>
+    <text x="660" y="695">• Max ≈ 0,42 A (WS2812B) / 0,56 A (SK6812 RGBW) – begränsa till 450 mA i mjukvaran.</text>
+    <text x="660" y="721">• SK6812 RGBW kopplas exakt likadant.</text>
+    <text x="40"  y="721">• Kabel: silikonkabel 28–30 AWG. 5V/GND som gemensam slinga, data i kedja.</text>
+    <text x="40"  y="747">• Skruva i pelarna först, dra sedan ledningarna upp genom pelaren och löd LED:en i toppen (annars tvinnas kabeln ≈8 varv).</text>
+  </g>
+  </g>
+</svg>
