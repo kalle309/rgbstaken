@@ -56,3 +56,9 @@ Kopplingsschema, dragning i basen och färdig konfiguration för WLED och ESPHom
 [`elektronik/`](elektronik/README.md).
 
 ![Kopplingsschema](elektronik/kopplingsschema.svg)
+
+## Licens
+
+Allt i repot (CAD-filer, STL, kod, konfiguration och bilder) är släppt som
+[CC0 1.0 Universal](LICENSE), alltså fri allmän egendom. Du får ladda ner, ändra, sprida och använda
+materialet precis som du vill, även kommersiellt, utan att fråga och utan att ange källa.
