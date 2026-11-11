@@ -9,11 +9,16 @@ Rendera om med `blender -b -P bilder/render_scen.py -- <projektmapp> bilder/fons
 
 ![Basen framifrån](solidcraft/bas_bage_fram.png)
 
-## Status (2026-11-08)
+## Status (2026-11-11)
 
-Alla delar är uppdaterade till v2 (uppmätta mått) och STL-filerna i `stl/` är nya:
-`base_left.stl`, `base_right.stl`, `pillar.stl` (skriv ut 7) och `flame.stl` (skriv ut 7).
-Nästa steg är en provutskrift av en pelare och en hylsa för att kontrollera gängspelet.
+STL-filer i `stl/`: `base_left.stl`, `base_right.stl`, `pillar.stl` (skriv ut 7), `flame.stl` (skriv ut 7)
+och `channel_lid.stl` (skriv ut 2).
+
+Efter första provutskriften (v2.1):
+- Pelarens gänga är kortad till 13 mm (hylsan är 16) så att röret själv tar stopp mot hylsans kant – ingen gänga syns.
+- Gängan har en konisk inledning (~3,5 mm) och lite mer spel (0,97 i XY ≈ 0,24 mm radiellt) – lättare att skruva i.
+- Kabelkanalen är öppen nedåt: ett spår i bågens undersida som täcks av en locklist, och en öppen ränna under
+  högra foten in till XIAO-facket. Kablarna läggs i i stället för att dras igenom.
 
 ## Mått (v2)
 
@@ -34,17 +39,20 @@ Nästa steg är en provutskrift av en pelare och en hylsa för att kontrollera g
 |---|---|---|
 | Vänster bashalva | 1 | Med mittblocket (ovanför z 160) och limtungan, 240,5 mm. Skrivs ut stående. |
 | Höger bashalva | 1 | XIAO-fack + USB-C i foten, 209,5 mm. Skrivs ut stående. |
-| Pelare (ljus) | 7 | Ø16 × 61 mm synligt, M16-gänga 16 mm, kabelhål Ø7 (Ø6 i gängan), LED-urtag Ø12,4 × 9. |
+| Pelare (ljus) | 7 | Ø16 × 61 mm synligt, M16-gänga 13 mm med konisk inledning, kabelhål Ø7 (Ø6 i gängan), LED-urtag Ø12,4 × 9. |
+| Locklist | 2 | 185 × 15,7 × 2,3 mm, täcker kabelspåret i bågens undersida. Skrivs ut liggande. |
 | Låga | 7 | Räfflad kupa Ø15 × 39 mm + tapp Ø12, transparent/natural PETG, 0 % fyllning. |
 
-CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`.
+CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`, `lock.sc`.
 
 ## Montering
 
 - Bashalvorna trycks ihop i mitten och limmas. En dold tunga (20 mm bred, 0,15 mm limspel)
   från vänster halva går in i ett spår i höger.
-- Pelarna skruvas ner i basens M16-hylsor tills de bottnar.
-- Kablarna går i en invändig kanal längs bågen och ner till XIAO-facket i högra foten.
+- Pelarna skruvas ner i basens M16-hylsor tills rörets kant tar stopp i hylsans försänkning.
+- Kablarna läggs i det öppna spåret i bågens undersida (10 mm brett, ≈ 20 mm djupt) och ner genom rännan under
+  högra foten till XIAO-facket. Sedan trycks locklisterna in i falsen (16 × 3 mm) och fästs med några droppar
+  lim eller smältlim (går att öppna igen).
 
 ## Elektronik
 

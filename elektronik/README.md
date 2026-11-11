@@ -9,7 +9,7 @@
 | Seeed XIAO ESP32C3 | 1 | I facket i högra foten, USB-C ut genom fotens ände. Glöm inte den medföljande WiFi-antennen (se nedan). |
 | WS2812B på rund PCB ≤ Ø12 mm, **eller** SK6812 RGBW (rekommenderas, varmare vitt) | 7 | En i toppen av varje pelare, i urtaget Ø12,4. |
 | Motstånd 330 Ω (0805 eller ¼ W) | 1 | I dataledningen, nära XIAO. |
-| Kondensator 100–470 µF, 6,3–10 V | 1 | Över 5V/GND nära XIAO. Låg modell (t.ex. 6,3 × 5 mm SMD-elektrolyt) får plats i schaktet/tunneln. |
+| Kondensator 100–470 µF, 6,3–10 V | 1 | Över 5V/GND nära XIAO. Låg modell (t.ex. 6,3 × 5 mm SMD-elektrolyt) får plats i rännan under foten. |
 | Silikonkabel 28–30 AWG, röd/svart/grön | ≈ 3 m av varje | 4 ledare ner i varje pelare. |
 | USB-C-kabel + 5 V-laddare ≥ 1 A | 1 | |
 
@@ -35,13 +35,17 @@ Varför D10? Den sitter bredvid 5V/GND/3V3 på XIAO:n och är ingen strapping-pi
 
 ### Dragning i basen
 
-1. Dra en slinga röd (5V) och svart (GND) genom kabelkanalen längs bågen, från XIAO-facket via tunneln och schaktet i högra foten.
-2. Skruva i pelarna **först**. Dra sedan upp ledningarna genom Ø8-hålet i hylsbotten och kabelhålet i pelaren
-   (Ø7, Ø6 genom gängan) och löd LED:en i toppen. Löder man först tvinnas kabeln ≈8 varv när pelaren skruvas ner.
+Kanalen är öppen nedåt (spår i bågens undersida + ränna under högra foten), så allt dras med staken liggande
+på rygg eller sidan.
+
+1. Lägg en slinga röd (5V) och svart (GND) i spåret längs bågen, ner genom rännan under högra foten till XIAO-facket.
+2. Skruva i pelarna **först**. Trä sedan ledningarna upp från spåret genom Ø8-hålet i hylsbotten och kabelhålet i
+   pelaren (Ø7, Ø6 genom gängan) och löd LED:en i toppen. Löder man först tvinnas kabeln ≈6 varv när pelaren skruvas ner.
 3. Varje pelare får fyra ledare: 5V, GND, DIN (från föregående ljus/XIAO) och DOUT (till nästa ljus).
-   5V och GND skarvas mot slingan i kanalen (krympslang!).
+   5V och GND skarvas mot slingan i spåret (krympslang!).
 4. Testa varje LED innan lågan trycks på – med WLED eller ESPHome syns direkt vilken som inte svarar.
-5. WiFi-antennen (flex-PCB) läggs platt mot facket/tunnelns vägg. Utan antenn är räckvidden mycket dålig.
+5. WiFi-antennen (flex-PCB) läggs platt mot facket/rännans vägg. Utan antenn är räckvidden mycket dålig.
+6. Tryck in locklisterna i falsen i bågens undersida och fäst dem med några droppar lim eller smältlim.
 
 ### Ström och signalnivå
 
