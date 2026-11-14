@@ -7,9 +7,9 @@
 | Del | Antal | Kommentar |
 |---|---|---|
 | Seeed XIAO ESP32C3 | 1 | I facket i högra foten, USB-C ut genom fotens ände. Glöm inte den medföljande WiFi-antennen (se nedan). |
-| WS2812B på rund PCB ≤ Ø12 mm, **eller** SK6812 RGBW (rekommenderas, varmare vitt) | 7 | En i toppen av varje pelare, i urtaget Ø12,4. |
+| WS2812B på rund PCB **≤ Ø10 mm**, **eller** SK6812 RGBW (rekommenderas, varmare vitt) | 7 | En i toppen av varje pelare, i urtaget Ø12,4 under lågans M12×1-gänga (gängans minsta Ø ≈ 11,1). |
 | Motstånd 330 Ω (0805 eller ¼ W) | 1 | I dataledningen, nära XIAO. |
-| Kondensator 100–470 µF, 6,3–10 V | 1 | Över 5V/GND nära XIAO. Låg modell (t.ex. 6,3 × 5 mm SMD-elektrolyt) får plats i rännan under foten. |
+| Kondensator 470 µF / 16 V, radiell Ø8 × 11,5 | 1 | Över 5V/GND, liggande i kondensatorfacket bredvid XIAO-facket (benen rakt in mot stiften), fäst med smältlim. |
 | Silikonkabel 28–30 AWG, röd/svart/grön | ≈ 3 m av varje | 4 ledare ner i varje pelare. |
 | USB-C-kabel + 5 V-laddare ≥ 1 A | 1 | |
 
@@ -43,8 +43,10 @@ på rygg eller sidan.
    pelaren (Ø7, Ø6 genom gängan) och löd LED:en i toppen. Löder man först tvinnas kabeln ≈6 varv när pelaren skruvas ner.
 3. Varje pelare får fyra ledare: 5V, GND, DIN (från föregående ljus/XIAO) och DOUT (till nästa ljus).
    5V och GND skarvas mot slingan i spåret (krympslang!).
-4. Testa varje LED innan lågan trycks på – med WLED eller ESPHome syns direkt vilken som inte svarar.
-5. WiFi-antennen (flex-PCB) läggs platt mot facket/rännans vägg. Utan antenn är räckvidden mycket dålig.
+4. Testa varje LED innan lågan skruvas på (M12×1, vanlig högergänga) – med WLED eller ESPHome syns direkt vilken
+   som inte svarar.
+5. WiFi-antennen (Seeed FPC-antenn, 40 × 20 mm) skjuts snett in underifrån i antennslitsen i högra armen **innan**
+   XIAO:n läggs i facket. Utan antenn är räckvidden mycket dålig.
 6. Tryck in locklisterna i falsen i bågens undersida och fäst dem med några droppar lim eller smältlim.
 
 ### Ström och signalnivå

@@ -13,7 +13,7 @@
   <rect width="1320" height="830" fill="#ffffff"/>
 
   <text x="40" y="40" font-size="26" font-weight="700" fill="#111">RGB-staken – kopplingsschema</text>
-  <text x="40" y="64" class="lbl">7 × WS2812B / SK6812 (rund PCB ≤ Ø12) i kedja, Seeed XIAO ESP32C3 i högra foten. Vy framifrån.</text>
+  <text x="40" y="64" class="lbl">7 × WS2812B / SK6812 (rund PCB ≤ Ø10) i kedja, Seeed XIAO ESP32C3 i högra foten. Vy framifrån.</text>
 
   <g transform="translate(0,34)">
   <!-- Basen (schematisk silhuett) -->

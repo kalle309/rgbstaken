@@ -5,22 +5,27 @@
 ![RGB-staken i fönstret en decemberkväll](bilder/fonster_december.png)
 
 *Rendering (inte foto) i Blender Cycles. Staken är byggd av de riktiga STL-filerna i `stl/`, allt runt omkring är scenografi.
-Rendera om med `blender -b -P bilder/render_scen.py -- <projektmapp> bilder/fonster_december.png 512`.*
+Rendera om med `blender -b -P bilder/render_scen.py -- <projektmapp> bilder/fonster_december.png 512`.
+Renderingen är gjord före v2.4 (centrerad skarv, gängad låga, manschett).*
 
 ![Basen framifrån](solidcraft/bas_bage_fram.png)
 
-## Status (2026-11-11)
+## Status (2026-11-14)
 
-STL-filer i `stl/`: `base_left.stl`, `base_right.stl`, `pillar.stl` (skriv ut 7), `flame.stl` (skriv ut 7)
-och `channel_lid.stl` (skriv ut 2).
+Aktuell version: **bas v2.4, pelare v2.2, låga v3, manschett v1**. Alla ändringar per version finns i
+[CHANGELOG.md](CHANGELOG.md).
 
-Efter första provutskriften (v2.1):
-- Pelarens gänga är kortad till 13 mm (hylsan är 16) så att röret själv tar stopp mot hylsans kant – ingen gänga syns.
-- Gängan har en konisk inledning (~3,5 mm) och lite mer spel (0,97 i XY ≈ 0,24 mm radiellt) – lättare att skruva i.
-- Kabelkanalen är öppen nedåt: ett spår i bågens undersida som täcks av en locklist, och en öppen ränna under
-  högra foten in till XIAO-facket. Kablarna läggs i i stället för att dras igenom.
+Senaste nytt:
+- **Centrerad skarv:** höger bashalva har ett lock över vänsters mittkloss, så skarven syns bara som en rak linje
+  mitt på staken. På toppen rundar den mittljuset i en liten halvcirkel (döljs av manschetten).
+- **Gängad låga:** lågan skruvas fast i pelarens topp med en M12×1-gänga (vanlig högergänga) med fasad nos och
+  försänkt öppning. LED-kortet måste därför vara **högst Ø10 mm**.
+- **Tillval – manschett:** en svart ring med fyra taggiga koppar och guldpärlor som träs över varje ljus.
+- Antennslits för XIAO:ns WiFi-antenn och ett kondensatorfack i högra foten.
 
-## Mått (v2)
+Inte provskrivet än: v2.4-skarven, den gängade lågan och manschetten.
+
+## Mått
 
 | | |
 |---|---|
@@ -31,32 +36,44 @@ Efter första provutskriften (v2.1):
 | Armänden | konkav utsvängning (R 28) ner mot foten, som på förlagan |
 | Djup | 34 mm |
 | Ljusrör | Ø16 mm, M16-gänga ner i basen |
+| Låga | Ø15 × 39 mm, M12×1-gänga ner i pelaren |
 | Ljusets topp | platta + 100 mm, alltså mitten 280 och ytterst 160 mm |
 
 ## Delar
 
-| Del | Antal | Kommentar |
-|---|---|---|
-| Vänster bashalva | 1 | Med mittblocket (ovanför z 160) och limtungan, 240,5 mm. Skrivs ut stående. |
-| Höger bashalva | 1 | XIAO-fack + USB-C i foten, 209,5 mm. Skrivs ut stående. |
-| Pelare (ljus) | 7 | Ø16 × 61 mm synligt, M16-gänga 13 mm med konisk inledning, kabelhål Ø7 (Ø6 i gängan), LED-urtag Ø12,4 × 9. |
-| Locklist | 2 | 185 × 15,7 × 2,3 mm, täcker kabelspåret i bågens undersida. Skrivs ut liggande. |
-| Låga | 7 | Räfflad kupa Ø15 × 39 mm + tapp Ø12, transparent/natural PETG, 0 % fyllning. |
+| Del | Fil | Antal | Kommentar |
+|---|---|---|---|
+| Vänster bashalva | `base_left.stl` | 1 | Mittljusets hylsa (hel gänga), dold limtunga och mittkloss som höger halvas lock går över. Skrivs ut stående. |
+| Höger bashalva | `base_right.stl` | 1 | Lock över mittklossen (2,5 mm gods, toppen bryggar 14 mm), XIAO-fack, antennslits, kondensatorfack, USB-C i foten. Skrivs ut stående. |
+| Pelare (ljus) | `pillar.stl` | 7 | Ø16 × 61 mm synligt, M16-gänga 13 mm med konisk inledning nertill, M12×1-hylsa med försänkning upptill, kabelhål Ø7, LED-urtag Ø12,4. |
+| Låga | `flame.stl` | 7 | Räfflad kupa Ø15 × 39 mm, gängad tapp M12×1 med fasad nos och Ø8 ljushål. Transparent/natural PETG, 0 % fyllning. |
+| Locklist | `channel_lid.stl` | 2 | 185 × 15,7 × 2,3 mm, täcker kabelspåret i bågens undersida. Skrivs ut liggande. |
+| Manschett (tillval) | `cuff.stl` | 7 | Ring Ø16,6 inuti med fyra koppar à 10 taggar, Ø48 över allt. Svart, liggande, inget support. |
+| Pärla (tillval) | `bead.stl` | 28 | 9 × 11 mm ägg med platt botten, limmas i manschettens koppar. Guld silk-PLA. |
 
-CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`, `lock.sc`.
+CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`, `lock.sc`, `manschett.sc`, `parla.sc`.
+
+![Centrerad skarv med lock](bilder/skarv_lock.png)
 
 ## Montering
 
-- Bashalvorna trycks ihop i mitten och limmas. En dold tunga (20 mm bred, 0,15 mm limspel)
-  från vänster halva går in i ett spår i höger.
-- Pelarna skruvas ner i basens M16-hylsor tills rörets kant tar stopp i hylsans försänkning.
-- Kablarna läggs i det öppna spåret i bågens undersida (10 mm brett, ≈ 20 mm djupt) och ner genom rännan under
-  högra foten till XIAO-facket. Sedan trycks locklisterna in i falsen (16 × 3 mm) och fästs med några droppar
-  lim eller smältlim (går att öppna igen).
+1. **Basen:** höger halvas lock skjuts in över vänsters mittkloss samtidigt som den dolda tungan (20 mm bred) går in
+   i spåret i höger halva. Allt har 0,15 mm limspel. Tryck ihop och limma.
+2. **Antenn och XIAO:** skjut in WiFi-antennen snett underifrån i antennslitsen i högra armen, lägg sedan XIAO:n i
+   facket (USB-C ut genom fotens ände) och kondensatorn i facket bredvid.
+3. **Pelarna:** skruva ner pelarna i basens M16-hylsor tills rörets kant tar stopp i hylsans försänkning.
+   Skruva i pelarna *innan* LED:en löds, annars tvinnas kabeln.
+4. **Kablar och LED:** lägg kablarna i det öppna spåret i bågens undersida och ner genom rännan under högra foten.
+   Trä dem upp genom pelarna och löd LED:en i toppen (se [`elektronik/`](elektronik/README.md)).
+5. **Locklister:** tryck in dem i falsen (16 × 3 mm) och fäst med några droppar lim eller smältlim.
+6. **Tillval:** trä manschetten över pelaren (går även med lågan på) och limma i pärlorna.
+7. **Lågorna:** skruva fast dem medurs i pelarnas topp.
+
+![Manschett (tillval)](bilder/manschett.png)
 
 ## Elektronik
 
-- 7 × WS2812B eller SK6812 RGBW på rund PCB (≤ Ø12 mm), en i toppen av varje pelare.
+- 7 × WS2812B eller SK6812 RGBW på rund PCB (**≤ Ø10 mm**), en i toppen av varje pelare.
 - XIAO ESP32C3 matas via USB-C, LED:erna från 5V-pinnen (≈ 0,4 A max).
 - ~330 Ω på data, ~470 µF över 5V/GND. Mjukvara: WLED eller ESPHome.
 
