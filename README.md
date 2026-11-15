@@ -12,10 +12,14 @@ Renderingen är gjord före v2.4 (centrerad skarv, gängad låga, manschett).*
 
 ## Status (2026-11-14)
 
-Aktuell version: **bas v2.4, pelare v2.2, låga v3, manschett v1**. Alla ändringar per version finns i
+Aktuell version: **bas v2.5, pelare v2.2, låga v3, manschett v1.1**. Alla ändringar per version finns i
 [CHANGELOG.md](CHANGELOG.md).
 
 Senaste nytt:
+- **Vågrät tunga i skarven (v2.5):** höger bashalva skjuts rakt in från höger, så locket och tungan går ihop i
+  samma rörelse.
+- **Stift för pärlorna:** varje kopp i manschetten har ett stift (Ø2 × 2 mm) och pärlorna ett hål (Ø2,4 × 2,5 mm)
+  i botten, så de hamnar mitt i koppen.
 - **Centrerad skarv:** höger bashalva har ett lock över vänsters mittkloss, så skarven syns bara som en rak linje
   mitt på staken. På toppen rundar den mittljuset i en liten halvcirkel (döljs av manschetten).
 - **Gängad låga:** lågan skruvas fast i pelarens topp med en M12×1-gänga (vanlig högergänga) med fasad nos och
@@ -23,7 +27,7 @@ Senaste nytt:
 - **Tillval – manschett:** en svart ring med fyra taggiga koppar och guldpärlor som träs över varje ljus.
 - Antennslits för XIAO:ns WiFi-antenn och ett kondensatorfack i högra foten.
 
-Inte provskrivet än: v2.4-skarven, den gängade lågan och manschetten.
+Provskrivet och klart: pelaren med gängad låga. Inte provskrivet än: v2.5-skarven och manschetten med pärlor.
 
 ## Mått
 
@@ -48,8 +52,8 @@ Inte provskrivet än: v2.4-skarven, den gängade lågan och manschetten.
 | Pelare (ljus) | `pillar.stl` | 7 | Ø16 × 61 mm synligt, M16-gänga 13 mm med konisk inledning nertill, M12×1-hylsa med försänkning upptill, kabelhål Ø7, LED-urtag Ø12,4. |
 | Låga | `flame.stl` | 7 | Räfflad kupa Ø15 × 39 mm, gängad tapp M12×1 med fasad nos och Ø8 ljushål. Transparent/natural PETG, 0 % fyllning. |
 | Locklist | `channel_lid.stl` | 2 | 185 × 15,7 × 2,3 mm, täcker kabelspåret i bågens undersida. Skrivs ut liggande. |
-| Manschett (tillval) | `cuff.stl` | 7 | Ring Ø16,6 inuti med fyra koppar à 10 taggar, Ø48 över allt. Svart, liggande, inget support. |
-| Pärla (tillval) | `bead.stl` | 28 | 9 × 11 mm ägg med platt botten, limmas i manschettens koppar. Guld silk-PLA. |
+| Manschett (tillval) | `cuff.stl` | 7 | Ring Ø16,6 inuti med fyra koppar à 10 taggar, Ø48 över allt, stift Ø2 × 2 mitt i varje kopp. Svart, liggande, inget support. |
+| Pärla (tillval) | `bead.stl` | 28 | 9 × 11 mm ägg med platt botten och hål Ø2,4 × 2,5 för stiftet, limmas i manschettens koppar. Guld silk-PLA, stående på botten. |
 
 CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`, `lock.sc`, `manschett.sc`, `parla.sc`.
 
@@ -67,7 +71,8 @@ CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`,
 4. **Kablar och LED:** lägg kablarna i det öppna spåret i bågens undersida och ner genom rännan under högra foten.
    Trä dem upp genom pelarna och löd LED:en i toppen (se [`elektronik/`](elektronik/README.md)).
 5. **Locklister:** tryck in dem i falsen (16 × 3 mm) och fäst med några droppar lim eller smältlim.
-6. **Tillval:** trä manschetten över pelaren (går även med lågan på) och limma i pärlorna.
+6. **Tillval:** trä manschetten över pelaren (går även med lågan på) och limma i pärlorna – hålet i pärlans botten
+   träs på stiftet i koppen.
 7. **Lågorna:** skruva fast dem medurs i pelarnas topp.
 
 ![Manschett (tillval)](bilder/manschett.png)

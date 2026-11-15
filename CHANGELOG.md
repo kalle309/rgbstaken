@@ -2,6 +2,10 @@
 
 Alla iterationer av RGB-staken, nyast först. Datum är när ändringen gjordes och pushades.
 
+## 2026-11-15 – Manschett v1.1: stift för pärlorna
+- **Manschett:** ett stift Ø2 × 2 mm mitt i varje kopps botten (z 2–4).
+- **Pärla:** hål Ø2,4 × 2,5 mm i den platta botten (0,2 mm spel för lim), så att pärlan hamnar mitt i koppen.
+
 ## 2026-11-15 – Bas v2.5: vågrät tunga
 - Provutskriften visade att halvorna inte gick ihop. Den sneda tungan (parallell med undersidan) måste skjutas in
   längs bågens lutning, men lockets tak över mittklossen kräver att höger halva kommer rakt från sidan.
