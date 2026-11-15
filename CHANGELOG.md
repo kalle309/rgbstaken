@@ -2,6 +2,14 @@
 
 Alla iterationer av RGB-staken, nyast först. Datum är när ändringen gjordes och pushades.
 
+## 2026-11-15 – Bas v2.5: vågrät tunga
+- Provutskriften visade att halvorna inte gick ihop. Den sneda tungan (parallell med undersidan) måste skjutas in
+  längs bågens lutning, men lockets tak över mittklossen kräver att höger halva kommer rakt från sidan.
+- Tungan är nu **vågrät**: 20 × 18 mm (z 136–154), sticker 13,5 mm in i höger halva (x 0,5–14), med 0,15 mm limspel.
+  Höger halva skjuts rakt in från höger. Det gamla spåret är igenfyllt. Kabelkanalen och mittljusets Ø8-kabelhål
+  är uppskurna genom tungan igen. Inga gängor behövde räknas om.
+- Pelare med gängad låga passade perfekt i samma provutskrift.
+
 ## 2026-11-14 – Högergängad låga
 - Lågans och pelarens M12×1-gänga är nu **högergängad** igen (vanlig medurs iskruvning). Vänstergängan från
   tidigare samma dag är borttagen.

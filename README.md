@@ -57,8 +57,9 @@ CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`,
 
 ## Montering
 
-1. **Basen:** höger halvas lock skjuts in över vänsters mittkloss samtidigt som den dolda tungan (20 mm bred) går in
-   i spåret i höger halva. Allt har 0,15 mm limspel. Tryck ihop och limma.
+1. **Basen:** skjut höger halva **rakt in från höger** (vågrätt). Locket går då över vänsters mittkloss samtidigt
+   som den dolda, vågräta tungan (20 × 18 mm, 13,5 mm lång) går in i spåret i höger halva. Allt har 0,15 mm
+   limspel. Tryck ihop och limma.
 2. **Antenn och XIAO:** skjut in WiFi-antennen snett underifrån i antennslitsen i högra armen, lägg sedan XIAO:n i
    facket (USB-C ut genom fotens ände) och kondensatorn i facket bredvid.
 3. **Pelarna:** skruva ner pelarna i basens M16-hylsor tills rörets kant tar stopp i hylsans försänkning.
