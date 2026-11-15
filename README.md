@@ -56,7 +56,36 @@ Provskrivet och klart: pelaren med gängad låga. Inte provskrivet än: v2.5-ska
 | Manschett (tillval) | `cuff.stl` | 7 | Ring Ø16,6 inuti med fyra koppar à 10 taggar, Ø48 över allt, stift Ø2 × 2 mitt i varje kopp. Svart, liggande, inget support. |
 | Pärla (tillval) | `bead.stl` | 28 | 9 × 11 mm ägg med platt botten och hål Ø2,4 × 2,5 för stiftet, limmas i manschettens koppar. Guld silk-PLA, stående på botten. |
 
-CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`, `lock.sc`, `manschett.sc`, `parla.sc`.
+CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`, `lock.sc`, `manschett.sc`, `parla.sc`,
+`minibas.sc`, `lock_mini.sc`.
+
+## Mini-variant (5 ljus, ett stycke)
+
+![Minibasen](bilder/minibas.png)
+
+En mindre bas med 5 ljus som skrivs ut **i ett stycke** på en Bambu Lab P2S. Den använder samma pelare, låga,
+manschett och pärlor som den stora staken. Basen är inte provskriven än.
+
+| | |
+|---|---|
+| Ljus | 5 st, c/c 44 mm (den stora har 50) |
+| Plattor | 34 × 34 mm på höjd 140 / 100 / 60 mm (mitten / mellan / ytterst) |
+| Mått | 250 × 60 × 140 mm (passar P2S med 3 mm marginal i bredd) |
+| Ljusets topp | platta + 100 mm, alltså 240 / 200 / 160 mm |
+| Fötter | 46 × 60 × 15 mm med avsats, konkav utsvängning R 14 |
+| Hylsor | M16, samma gänga och djup som stora basen |
+| Elektronik | Samma som den stora: XIAO-fack, USB-C, kondensatorfack och antennslits i högra foten, öppen kabelkanal med locklist |
+
+| Del | Fil | Antal | Kommentar |
+|---|---|---|---|
+| Minibas | `mini_base.stl` | 1 | Skrivs ut stående, 250 mm längs X. |
+| Locklist mini | `mini_channel_lid.stl` | 2 | 107 × 15,7 × 2,3 mm, en per sida av bågen. Skrivs ut liggande. |
+| Pelare, låga, manschett, pärla | som ovan | 5 / 5 / 5 / 20 | |
+
+Antennslitsen går lodrätt upp längs armens yttersida (2,2 × 22 mm, ≈41 mm över facket) i stället för snett som i
+den stora basen, eftersom armen är för smal för en sned slits. I WLED anger du 5 lysdioder i stället för 7.
+
+![Minibasen i snitt](bilder/minibas_snitt.png)
 
 ![Centrerad skarv med lock](bilder/skarv_lock.png)
 

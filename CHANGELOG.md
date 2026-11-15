@@ -2,6 +2,13 @@
 
 Alla iterationer av RGB-staken, nyast först. Datum är när ändringen gjordes och pushades.
 
+## 2026-11-15 – Minibas med 5 ljus (ny del)
+- Ny bas `minibas.sc` / `mini_base.stl` som skrivs ut i ett stycke på P2S: 250 × 60 × 140 mm, 5 ljus med c/c 44,
+  plattor på 140 / 100 / 60 mm. Samma M16-hylsor som den stora basen, så alla pelare, lågor, manschetter och
+  pärlor passar.
+- Samma elektronik som den stora: XIAO-fack, USB-C, kondensatorfack, öppen kabelkanal med locklist
+  (`lock_mini.sc` / `mini_channel_lid.stl`, 2 st). Antennslitsen är lodrät längs armens yttersida.
+
 ## 2026-11-15 – Bas v2.6: mer höjdspel i skarven
 - Provutskrift av båda halvorna: höger halvas topp sprack (lagren släppte) när halvorna trycktes ihop. Troligen
   satt delar av supporten kvar, och undersidorna på tungan och mittklossen blir ojämna eftersom de skrivs ut som
