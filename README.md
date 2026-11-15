@@ -57,7 +57,7 @@ Provskrivet och klart: pelaren med gängad låga. Inte provskrivet än: v2.5-ska
 | Pärla (tillval) | `bead.stl` | 28 | 9 × 11 mm ägg med platt botten och hål Ø2,4 × 2,5 för stiftet, limmas i manschettens koppar. Guld silk-PLA, stående på botten. |
 
 CAD-filer (SolidCraft) finns i `solidcraft/`: `bas.sc`, `pelare.sc`, `lagan.sc`, `lock.sc`, `manschett.sc`, `parla.sc`,
-`minibas.sc`, `lock_mini.sc`.
+`minibas.sc`, `lock_mini.sc`, `kulljusstake.sc`.
 
 ## Mini-variant (5 ljus, ett stycke)
 
@@ -86,6 +86,32 @@ Antennslitsen går lodrätt upp längs armens yttersida (2,2 × 22 mm, ≈41 mm 
 den stora basen, eftersom armen är för smal för en sned slits. I WLED anger du 5 lysdioder i stället för 7.
 
 ![Minibasen i snitt](bilder/minibas_snitt.png)
+
+## Kulljusstake (1 ljus)
+
+![Kulljusstaken](bilder/kulljusstake.png)
+
+En liten klassisk kulljusstake för ett ljus: ett klot på tre kulfötter med en utsvängd skål upptill. Den använder
+samma pelare, låga och manschett som de andra staken. Inte provskriven än.
+
+| | |
+|---|---|
+| Mått | Ø52 × 66 mm (klot Ø50, skål Ø52, kulfötter Ø17 med platt undersida) |
+| Ljusets topp | 66 + 100 = 166 mm |
+| Pelare | M16-hylsa upptill, samma som i baserna |
+| Botten | skruvas i med **M36×2**, 3–4 varv och ≈0,25 mm spel. Bottens gänga har en konisk nos på ≈2,6 mm (r 16,2 → 18), och kroppens öppning har en 45°-försänkning (Ø37,6), samma princip som pelarens gänga. |
+| Elektronik | XIAO + kondensator inuti klotet, USB-C-öppning 13 × 7 mm i sidan. Antennen (FPC) läggs längs insidan. |
+
+| Del | Fil | Antal | Kommentar |
+|---|---|---|---|
+| Kropp | `ball_body.stl` | 1 | Skrivs ut stående på den gängade öppningen, inget support. Takets brygga i håligheten är Ø27. |
+| Botten med fötter | `ball_bottom.stl` | 1 | Skrivs ut stående på fötterna med träd-support under klotets botten. |
+| Pelare, låga, manschett, pärla | som ovan | 1 / 1 / 1 / 4 | |
+
+Montering: löd LED:en och dra kabeln ner genom Ø8-hålet under hylsan. Fäst XIAO:n med USB-C mot öppningen i sidan
+med smältlim, och fäst kondensatorn och antennen likadant. Skruva sedan i botten. Ställ in 1 lysdiod i WLED.
+
+![Kulljusstaken i snitt](bilder/kulljusstake_snitt.png)
 
 ![Centrerad skarv med lock](bilder/skarv_lock.png)
 

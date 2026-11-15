@@ -2,6 +2,17 @@
 
 Alla iterationer av RGB-staken, nyast först. Datum är när ändringen gjordes och pushades.
 
+## 2026-11-15 – Kulljusstake: lättare att skruva i botten
+- Bottens utvändiga gänga har fått en längre konisk inledning: 3 mm lång, från r 16,2 (under gängans botten) till
+  r 18. Gängan tar då efter ≈2,6 mm, som på pelaren. Förut var det en fas på 1,2 mm.
+- Kroppens gängöppning har fått en 45°-försänkning (Ø37,6) som styr in botten.
+
+## 2026-11-15 – Kulljusstake (ny del)
+- Ny stake för ett ljus, `kulljusstake.sc`: ett klot (Ø50) på tre kulfötter med en utsvängd skål (Ø52), totalt
+  66 mm hög. M16-hylsa för samma pelare som de andra staken.
+- Ihålig med plats för XIAO och kondensator, USB-C-öppning i sidan. Botten med fötterna skruvas i med M36×2
+  (fasad inledning, ≈0,25 mm spel). Filerna är `ball_body.stl` och `ball_bottom.stl`.
+
 ## 2026-11-15 – Minibas med 5 ljus (ny del)
 - Ny bas `minibas.sc` / `mini_base.stl` som skrivs ut i ett stycke på P2S: 250 × 60 × 140 mm, 5 ljus med c/c 44,
   plattor på 140 / 100 / 60 mm. Samma M16-hylsor som den stora basen, så alla pelare, lågor, manschetter och
