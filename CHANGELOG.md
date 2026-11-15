@@ -2,6 +2,16 @@
 
 Alla iterationer av RGB-staken, nyast först. Datum är när ändringen gjordes och pushades.
 
+## 2026-11-15 – Bas v2.6: mer höjdspel i skarven
+- Provutskrift av båda halvorna: höger halvas topp sprack (lagren släppte) när halvorna trycktes ihop. Troligen
+  satt delar av supporten kvar, och undersidorna på tungan och mittklossen blir ojämna eftersom de skrivs ut som
+  överhäng. Spelet i bredd var bra.
+- Bara höger halva är ändrad och bara i höjdled:
+  - Tungans spår är 0,5 mm högre än tungan både över och under (tidigare 0,15).
+  - Bommen mellan tungan och mittklossen är sänkt 0,5 mm, så att den har spel mot klossens undersida (tidigare 0).
+  - Lockets tak har 0,4 mm spel mot klossens topp (tidigare 0,15). Locket är då 2,25 mm tjockt.
+- Vänster halva är oförändrad, så en redan utskriven vänster halva passar.
+
 ## 2026-11-15 – Manschett v1.1: stift för pärlorna
 - **Manschett:** ett stift Ø2 × 2 mm mitt i varje kopps botten (z 2–4).
 - **Pärla:** hål Ø2,4 × 2,5 mm i den platta botten (0,2 mm spel för lim), så att pärlan hamnar mitt i koppen.

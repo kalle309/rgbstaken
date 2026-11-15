@@ -12,12 +12,13 @@ Renderingen är gjord före v2.4 (centrerad skarv, gängad låga, manschett).*
 
 ## Status (2026-11-14)
 
-Aktuell version: **bas v2.5, pelare v2.2, låga v3, manschett v1.1**. Alla ändringar per version finns i
+Aktuell version: **bas v2.6, pelare v2.2, låga v3, manschett v1.1**. Alla ändringar per version finns i
 [CHANGELOG.md](CHANGELOG.md).
 
 Senaste nytt:
 - **Vågrät tunga i skarven (v2.5):** höger bashalva skjuts rakt in från höger, så locket och tungan går ihop i
-  samma rörelse.
+  samma rörelse. **v2.6:** 0,5 mm spel i höjdled vid tungan och mittklossen (bredden har kvar 0,15 mm).
+  Ta bort all support under tungan och mittklossen på vänster halva innan du trycker ihop halvorna.
 - **Stift för pärlorna:** varje kopp i manschetten har ett stift (Ø2 × 2 mm) och pärlorna ett hål (Ø2,4 × 2,5 mm)
   i botten, så de hamnar mitt i koppen.
 - **Centrerad skarv:** höger bashalva har ett lock över vänsters mittkloss, så skarven syns bara som en rak linje
